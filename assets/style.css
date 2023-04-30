@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 3%;
+    background-color: var(--light-scream);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    text-align: center;
+}
+
+p {
+    font-weight: 500;
+    color: var(--medium-brown);
+    text-align: center;
+    font-size: var(--font-pm);
+}
+
+:root {
+    --black-main: #030303;
+    --medium-brown: #7A746E;
+    --light-scream: #FFF7F0;
+    --galactic-blue: #755CDE;
+    --summer-yellow: #F6A560;
+    --pink-main: #F39E9E;
+    --light-red: #EB7565;
+    --cyan: #61C4B7;
+    --dark-purple: #552049;
+    --font-lg: 3.5rem;
+    --font-m: 2.5rem;
+    --font-s: 2rem;
+    --font-pm: 1rem;
+    --font-pd: 1.75rem;
+}
+
+/* Header */
+
+#header, #footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    height: 2.5rem;
+}
+
+.consultation-btn {
+    height: 2.5rem;
+    padding: 0 2rem;
+    background-color: var(--black-main);
+    color: var(--light-scream);
+    border-radius: 999px;
+}
+
+.tab-btn:hover {
+    background-color: var(--galactic-blue);
+}
+
+
+
+/* Heading content */
+.heading-content {
+    margin-top: 2rem;
+}
+
+.heading-content > h1 {
+    font-size: var(--font-m);
+    padding: 0 1rem;
+}
+
+.heading-content > p {
+    margin-top: 0.5rem;
+    padding: 0 2.2rem;
+}
+
+/* Skills section */
+.my-skills-section {
+    margin: 0;
+}
+
+.my-skills-section > * {
+    height: 50vw;
+    position: relative;
+    border-radius: 10px;
+}
+
+.my-skills-section p {
+    margin: 0;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    color: var(--light-scream);
+    font-size: var(--font-pd);
+}
+
+.img-skill {
+    width: 40%;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+}
+
+.skill-design {
+    height: 100vw;
+}
+
+.skill-apps, .skill-uxui {
+    width: calc(50% - 0.75rem);
+}
+
+.skill-apps {
+    margin-left: 1.5rem;
+}
+
+.skill-design {
+    background-color: var(--galactic-blue);
+}
+.skill-uxui {
+    background-color: var(--summer-yellow);
+}
+.skill-apps {
+    background-color: var(--pink-main);
+}
+.skill-illustrations {
+    background-color: var(--light-red);
+}
+.skill-photography {
+    background-color: var(--cyan);
+}
+.skill-motion-graphics {
+    background-color: var(--dark-purple);
+}
+
+/* Avatar & information */
+.my-information {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.avatar-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.5rem;
+    margin: 2rem 0;
+}
+
+.avatar-information p {
+    margin: 1rem 0;
+}
+
+.avatar {
+    width: 80%;
+    margin-left: auto;
+}
+
+.body-btn {
+    background-color: var(--light-red);
+}
+
+.body-btn:hover {
+    background-color: var(--summer-yellow);
+}
+
+/* My work */
+
+.carousel-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[class*="btn-arrow-"] {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 999px;
+    background-color: var(--black-main);
+    margin: 0.5rem 0.5rem;
+}
+
+[class*="btn-arrow-"] img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Footer card */
+
+.footer-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-main);
+    color: var(--light-scream);
+    padding: 3rem 1rem;
+    margin-top: 3rem;
+    border-radius: 14px;
+}
+
+/* Footer */
+
+#footer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
