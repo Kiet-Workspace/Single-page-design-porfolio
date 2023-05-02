@@ -1,18 +1,20 @@
 $(document).ready(function(){
     $('.my-carousel').slick({
         centerMode: true,
-        centerPadding: '60px',
+        // centerPadding: '60px',
         slidesToShow: 1,
         arrows: false,  
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000, 
+        mobileFirst: true,
+        variableWidth: true,
         responsive: [
           {
             breakpoint: 768,
             settings: {
               arrows: false,
               centerMode: true,
-              centerPadding: '40px',
+              // centerPadding: '40px',
               slidesToShow: 1
             }
           },
@@ -21,8 +23,9 @@ $(document).ready(function(){
             settings: {
               arrows: false,
               centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
+              // centerPadding: '40px',
+              slidesToShow: 1,
+              swipe: true,
             }
           }
         ]

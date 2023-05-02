@@ -79,7 +79,7 @@ p {
 
 /* Heading content */
 .heading-content {
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
 .heading-content > h1 {
@@ -94,11 +94,21 @@ p {
 
 /* Skills section */
 .my-skills-section {
-    margin: 0;
+    display: grid;
+    grid-template-columns: calc(50% - 1.25rem/2) calc(50% - 1.25rem/2);
+    grid-template-rows: 22.75rem 11.375rem 9.875rem 11.375rem 11.375rem;
+    grid-template-areas: 
+    'skill-design skill-design'
+    'skill-uxui skill-apps'
+    'skill-ill skill-ill'
+    'skill-photo skill-photo'
+    'skill-graphics skill-graphics'
+    ;
+    column-gap: 1.25rem;
+    row-gap: 1.25rem;
 }
 
 .my-skills-section > * {
-    height: 50vw;
     position: relative;
     border-radius: 10px;
 }
@@ -119,34 +129,29 @@ p {
     right: 1.2rem;
 }
 
-.skill-design {
-    height: 100vw;
-}
-
-.skill-apps, .skill-uxui {
-    width: calc(50% - 0.75rem);
-}
-
-.skill-apps {
-    margin-left: 1.5rem;
-}
 
 .skill-design {
+    grid-area: skill-design;
     background-color: var(--galactic-blue);
 }
 .skill-uxui {
+    grid-area: skill-uxui;
     background-color: var(--summer-yellow);
 }
 .skill-apps {
+    grid-area: skill-apps;
     background-color: var(--pink-main);
 }
 .skill-illustrations {
+    grid-area: skill-ill;
     background-color: var(--light-red);
 }
 .skill-photography {
+    grid-area: skill-photo;
     background-color: var(--cyan);
 }
 .skill-motion-graphics {
+    grid-area: skill-graphics;
     background-color: var(--dark-purple);
 }
 
@@ -173,8 +178,8 @@ p {
 }
 
 .avatar {
-    width: 80%;
-    margin-left: auto;
+    height: 18.75rem;
+    width: 18.75rem;
 }
 
 .body-btn {
@@ -195,8 +200,10 @@ p {
     margin: 0 -3%;
 }
 
-.my-carousel-inner img {
+.my-carousel img {
     border-radius: 10px;
+    height: 180px;
+    width: 100%;
 }
 
 .carousel-nav {
@@ -258,8 +265,96 @@ p {
         font-size: var(--font-p-tb)!important;
     }
 
-    .consultation-btn p {
+    .consultation-btn {
         font-size: var(--font-btn-tb)!important;
     }
 
+    /* resize */
+
+    body {
+        padding: 5%;
+    }
+
+    .header-logo {
+        height: 4rem;
+    }
+
+    .consultation-btn {
+        height: 3.5rem;
+        width: 14.25rem;
+    }
+
+    img.avatar {
+        height: 22.75rem;
+        width: 22.75rem;
+    }
+
+    .heading-content, .my-skills-section, .my-information, .my-work {
+        margin-bottom: 4rem;
+    }
+
+    .my-carousel, .footer-card {
+        margin-bottom: 2rem;
+    }
+
+    /* skills grids */
+
+    .my-skills-section {
+        display: grid;
+        grid-template-columns: calc(50% - 1.5rem/2) calc(25% - 2.25rem/2) calc(25% - 2.25rem/2);
+        grid-template-rows: 11.375rem 9.875rem 11.375rem;
+        grid-template-areas: 
+        'skill-design skill-uxui skill-apps'
+        'skill-design skill-ill skill-ill'
+        'skill-photo skill-graphics skill-graphics'
+        ;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+
+    }
+
+    /* Avater & information */
+    .my-information {
+        display: grid;
+        grid-template-columns: calc(50% - 1.5rem/2) calc(50% - 1.5rem/2);
+        column-gap: 1.5rem;
+    }
+
+    .avatar-container {
+        position: relative;
+    }
+
+    .avatar {
+        position: absolute;
+        right: 0;
+    }
+
+    .avatar-information {
+        align-items: flex-start;
+    }
+
+    .avatar-information h2, .avatar-information p {
+        text-align: left;
+    }
+
+    /* My work */
+    .my-carousel img {
+        height: 360px;
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .slick-list {
+        margin: 0 -5%;
+    }
+
+    .slick-slide {
+        margin: 0 1rem;
+    }
+
+    /* Footer card */
+
+    .footer-card {
+        padding: 10% 15%;
+    }
 }
