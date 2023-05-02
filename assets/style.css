@@ -46,7 +46,11 @@ p {
     --font-btn-tb: 1rem;
     --font-skills-tb: 1.5rem;
 
-
+    --font-h1-desk: 3.5rem;
+    --font-h2-desk: 2.5rem;
+    --font-p-desk: 1.125rem;
+    --font-btn-desk: 1rem;
+    --font-skills-desk: 1.5rem;
 }
 
 /* Header */
@@ -197,7 +201,7 @@ p {
 }
 
 .slick-list {
-    margin: 0 -3%;
+    margin: 0 -3vw;
 }
 
 .my-carousel img {
@@ -219,6 +223,10 @@ p {
     border-radius: 999px;
     background-color: var(--black-main);
     margin: 0.5rem 0.5rem;
+}
+
+[class*="btn-arrow-"]:hover {
+    background-color: var(--galactic-blue);
 }
 
 [class*="btn-arrow-"] img {
@@ -345,7 +353,7 @@ p {
     }
 
     .slick-list {
-        margin: 0 -5%;
+        margin: 0 -5vw;
     }
 
     .slick-slide {
@@ -356,5 +364,129 @@ p {
 
     .footer-card {
         padding: 10% 15%;
+    }
+}
+
+/* Media query desktop 992px*/
+@media screen and (min-width: 992px) {
+    /* reset font-size */
+    h1 {
+        font-size: var(--font-h1-desk)!important;
+    }
+    h2 {
+        font-size: var(--font-h2-desk)!important;
+    }
+    p {
+        font-size: var(--font-p-desk)!important;
+    }
+
+    .consultation-btn {
+        font-size: var(--font-btn-desk)!important;
+    }
+
+    /* resize */
+
+    body {
+        padding: 5% 10%;
+    }
+
+    .header-logo {
+        height: 4rem;
+    }
+
+    .consultation-btn {
+        height: 3.5rem;
+        width: 14.25rem;
+    }
+
+    img.avatar {
+        height: 27.8125rem;
+        width: 27.8125rem;
+        position: relative;
+    }
+
+    .heading-content, .my-skills-section, .my-information, .my-work {
+        margin-bottom: 6rem;
+    }
+
+    .my-carousel, .footer-card {
+        margin-bottom: 3rem;
+    }
+
+    /* My-work */
+    .slick-list {
+        margin: 0 -10vw;
+    }
+
+    .my-carousel img {
+        height: 360px;
+        width: 100%;
+    }
+
+    [class*="btn-arrow-"] {
+        height: 4rem;
+        width: 4rem;
+    }
+
+
+
+    /* skills grids */
+    
+
+    .my-skills-section {
+        display: grid;
+        grid-template-columns: calc(33.33% - 1.625rem/2) calc(33.33%/2 - 1.625rem) calc(33.33%/2 - 1.625rem) calc(33.33% - 1.625rem/2);
+        grid-template-rows: 11.375rem 9.875rem;
+        grid-template-areas: 
+        'skill-design skill-uxui skill-apps skill-photo'
+        'skill-design skill-ill skill-ill skill-graphics'
+        ;
+        column-gap: 1.625rem;
+        row-gap: 1.625rem;
+
+    }
+
+
+
+    /* Avatar & information */
+
+    .avatar-information {
+        padding: 1rem 0;
+        justify-content: space-around;
+    }
+
+    .avatar-container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    /* footer card */
+    .footer-card {
+        display: grid;
+        padding: 5rem 5rem;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+        'footer-h3 footer-btn'
+        'footer-p footer-btn';
+    }
+
+    .footer-card h3 {
+        grid-area: footer-h3;
+    }
+
+    .footer-card p {
+        grid-area: footer-p;
+    }
+
+    .footer-card h3, .footer-card p {
+        text-align: left;
+    }
+
+    .footer-card .footer-btn {
+        grid-area: footer-btn;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
 }

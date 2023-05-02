@@ -4,7 +4,7 @@ $(document).ready(function(){
         // centerPadding: '60px',
         slidesToShow: 1,
         arrows: false,  
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000, 
         mobileFirst: true,
         variableWidth: true,
