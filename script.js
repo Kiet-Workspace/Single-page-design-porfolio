@@ -2,9 +2,8 @@ $(document).ready(function(){
     $('.my-carousel').slick({
         centerMode: true,
         centerPadding: '60px',
-        slidesToShow: 3,
-        arrows: true,
-        draggable: false,    
+        slidesToShow: 1,
+        arrows: false,  
         autoplay: true,
         autoplaySpeed: 2000, 
         responsive: [
@@ -14,7 +13,7 @@ $(document).ready(function(){
               arrows: false,
               centerMode: true,
               centerPadding: '40px',
-              slidesToShow: 3
+              slidesToShow: 1
             }
           },
           {

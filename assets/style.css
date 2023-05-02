@@ -14,13 +14,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-align: center;
+    margin: 0;
 }
 
 p {
     font-weight: 500;
     color: var(--medium-brown);
     text-align: center;
-    font-size: var(--font-pm);
+    font-size: var(--font-p-mb);
 }
 
 :root {
@@ -33,11 +34,19 @@ p {
     --light-red: #EB7565;
     --cyan: #61C4B7;
     --dark-purple: #552049;
-    --font-lg: 3.5rem;
-    --font-m: 2.5rem;
-    --font-s: 2rem;
-    --font-pm: 1rem;
-    --font-pd: 1.75rem;
+    --font-h1-mb: 2.25rem;
+    --font-h2-mb: 1.625rem;
+    --font-p-mb: 1rem;
+    --font-btn-mb: 0.875rem;
+    --font-skills-mb: 1.5rem;
+
+    --font-h1-tb: 2.75rem;
+    --font-h2-tb: 2rem;
+    --font-p-tb: 1.125rem;
+    --font-btn-tb: 1rem;
+    --font-skills-tb: 1.5rem;
+
+
 }
 
 /* Header */
@@ -49,15 +58,17 @@ p {
 }
 
 .header-logo {
-    height: 2.5rem;
+    height: 3rem;
 }
 
 .consultation-btn {
-    height: 2.5rem;
-    padding: 0 2rem;
+    display: inline-block;
+    height: 2.75rem;
+    width: 11rem;
     background-color: var(--black-main);
     color: var(--light-scream);
     border-radius: 999px;
+    font-size: var(--font-btn-mb);
 }
 
 .tab-btn:hover {
@@ -72,12 +83,12 @@ p {
 }
 
 .heading-content > h1 {
-    font-size: var(--font-m);
+    font-size: var(--font-h1-mb);
     padding: 0 1rem;
 }
 
 .heading-content > p {
-    margin-top: 0.5rem;
+    margin: 1.5rem 0;
     padding: 0 2.2rem;
 }
 
@@ -98,7 +109,7 @@ p {
     bottom: 1.2rem;
     left: 1.2rem;
     color: var(--light-scream);
-    font-size: var(--font-pd);
+    font-size: var(--font-skills-mb);
 }
 
 .img-skill {
@@ -153,6 +164,10 @@ p {
     margin: 2rem 0;
 }
 
+.avatar-information h2 {
+    font-size: var(--font-h2-mb);
+}
+
 .avatar-information p {
     margin: 1rem 0;
 }
@@ -171,6 +186,18 @@ p {
 }
 
 /* My work */
+
+.slick-slide {
+    margin: 0 0.5rem;
+}
+
+.slick-list {
+    margin: 0 -3%;
+}
+
+.my-carousel-inner img {
+    border-radius: 10px;
+}
 
 .carousel-nav {
     width: 100%;
@@ -206,9 +233,33 @@ p {
     border-radius: 14px;
 }
 
+.footer-card p {
+    margin: 1.5rem 0;
+}
+
 /* Footer */
 
 #footer {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+/* Media query tablet 768px*/
+
+@media screen and (min-width: 768px) {
+    /* reset font-size */
+    h1 {
+        font-size: var(--font-h1-tb)!important;
+    }
+    h2 {
+        font-size: var(--font-h2-tb)!important;
+    }
+    p {
+        font-size: var(--font-p-tb)!important;
+    }
+
+    .consultation-btn p {
+        font-size: var(--font-btn-tb)!important;
+    }
+
 }
